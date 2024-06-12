@@ -1,7 +1,4 @@
-package w3l8.prob3;
-
-import java.util.ArrayList;
-import java.util.List;
+package prob3;
 
 public class Marketing {
 	private String employeename;
@@ -41,6 +38,19 @@ public class Marketing {
 	@Override
 	public String toString() {
 		return employeename + " " + productname + " " + salesamount;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (obj instanceof Marketing marketing) {
+            if(this.employeename.equals(marketing.getEmployeename()) ||
+					this.productname.equals(marketing.productname) ||
+					this.salesamount == marketing.salesamount){
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
