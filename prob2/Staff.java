@@ -1,6 +1,6 @@
 package prob2;
 
-public final class Staff {
+public final class Staff implements EmployeeData{
 	private String name;
 	private double salary;
 	private int numDependants;
